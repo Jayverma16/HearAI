@@ -59,43 +59,46 @@ pip install -r requirement.txt
 3️⃣ Setup Database
 
 Login to MySQL:
-
+```bash
 mysql -u root -p
 
 
 Create database:
 
 CREATE DATABASE voice_ai;
+```
 
 4️⃣ Configure Database
-
+```bash
 Open database.py and update:
-
 mysql+pymysql://jay:StrongPassword123@localhost:3306/voice_ai
 
-
 (Replace username and password if needed.)
+```
 
 ▶️ Run the Backend
 
 For local use:
-
+```bash
 uvicorn app.main:app --reload
-
+```
 
 For access from mobile or other devices on your Wi-Fi:
-
+```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
-
+```
 
 The API will be available at:
 
+```bash
 http://localhost:8000
-
+```
 
 or
-
+```bash
 http://<your-local-ip>:8000
+```
+---
 
 📡 What HearAI Is For
 
@@ -113,6 +116,7 @@ Smart note-taking apps
 Enterprise AI tools
 
 All running locally.
+---
 
 🔒 Why HearAI?
 Feature	Benefit
@@ -121,6 +125,8 @@ Offline capable	Works without internet
 Multi-model support	Speech + LLM + NLP
 One backend	Multiple client apps
 FastAPI	Easy integration
+---
+
 🧠 Vision
 
 HearAI is built to be the core AI engine for private, offline, and secure intelligent applications.
