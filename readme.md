@@ -1,15 +1,25 @@
-🧠 HearAI — Local AI Inference Backend
+# 🧠 HearAI  
+### Local AI Inference Backend for Speech & LLM Applications
 
-HearAI is a general-purpose local inference backend designed to run speech, LLM, and AI models entirely on your own machine.
-It powers local AI applications such as:
+HearAI is a **general-purpose local inference backend** designed to run AI models **entirely on your own machine**.  
+It enables speech-to-text, meeting summarization, and local LLM-powered applications **without sending any data to the cloud**.
 
-• Speech-to-Text
-• Meeting summarization
-• Voice assistants
-• Private LLM chatbots
-• Action & intent extraction
+---
 
-No cloud. No data leaks. 100% local.
+## ✨ Features
+
+- 🎙️ **Speech-to-Text** using Whisper  
+- 🧠 **Local LLMs** (LLaMA, Mistral, etc.)  
+- 📄 **Meeting Summaries & Action Items**  
+- 🔒 **100% Private — Runs Fully Offline**  
+- ⚡ **FastAPI-based High-Performance API**  
+- 📱 Works with **Mobile, Web & Desktop Apps**
+
+---
+
+## 🏗 Architecture
+
+
 
 🚀 What HearAI Does
 
