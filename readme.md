@@ -19,54 +19,42 @@ It enables speech-to-text, meeting summarization, and local LLM-powered applicat
 
 ## 🏗 Architecture
 
-
-
-🚀 What HearAI Does
-
-HearAI acts as the AI brain for your applications.
-
-Audio / Text
-      ↓
-HearAI Backend
-      ↓
-Whisper / LLM / Custom Models
-      ↓
+Mobile / Web / Desktop Apps
+↓
+HearAI API
+↓
+Whisper / LLM / AI Models
+↓
 Transcripts, Summaries, Actions
 
 
-You can connect:
+HearAI acts as the **AI brain** for all your local applications.
 
-Mobile apps (React Native, Flutter)
+---
 
-Web apps
+## 🛠 Tech Stack
 
-Desktop clients
+- **FastAPI** – REST API  
+- **Whisper** – Speech Recognition  
+- **Local LLMs** – LLaMA, Mistral, etc.  
+- **MySQL** – Memory, transcripts, sessions  
+- **Python 3.12**  
+- **Conda** – Environment management  
 
-to this single backend and run everything locally.
+---
 
-🧩 Tech Stack
+## 🚀 Setup
 
-FastAPI — REST API
+### 1️⃣ Create Environment
 
-Whisper / Speech Models — Speech-to-Text
-
-Local LLMs (LLaMA, Mistral, etc.)
-
-MySQL — Conversations, transcripts, memory
-
-Python 3.12
-
-Conda — Environment isolation
-
-⚙️ Installation
-1️⃣ Create Conda Environment
+```bash
 conda create --name HearAI python=3.12 -y
 conda activate HearAI
 
 2️⃣ Install Dependencies
 pip install -r requirement.txt
 
-3️⃣ Setup MySQL Database
+3️⃣ Setup Database
 
 Login to MySQL:
 
@@ -77,56 +65,76 @@ Create database:
 
 CREATE DATABASE voice_ai;
 
-4️⃣ Configure Database URL
+4️⃣ Configure Database
 
-Open database.py and set:
+Open database.py and update:
 
 mysql+pymysql://jay:StrongPassword123@localhost:3306/voice_ai
 
 
-(Change username and password as needed)
+(Replace username and password if needed.)
 
-▶️ Running HearAI
+▶️ Run the Backend
 
-Start the backend:
+For local use:
 
 uvicorn app.main:app --reload
 
 
-On Ubuntu or Linux, HearAI will run on:
-
-http://127.0.0.1:8000
-
-
-To allow mobile devices on your Wi-Fi network:
+For access from mobile or other devices on your Wi-Fi:
 
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 
-📡 API Purpose
 
-HearAI is not a single-task API.
+The API will be available at:
 
-It is a general inference engine that can run:
+http://localhost:8000
 
-Speech models (Whisper)
 
-LLMs (LLaMA, Mistral, etc.)
+or
 
-Classification models
+http://<your-local-ip>:8000
 
-Summarizers
+📡 What HearAI Is For
 
-Action & intent engines
+HearAI is not a single-purpose API.
+It is a general AI inference engine that can power:
 
-All locally, privately, and in real time.
+Voice assistants
+
+Meeting & call summarizers
+
+Offline ChatGPT-like apps
+
+Smart note-taking apps
+
+Enterprise AI tools
+
+All running locally.
 
 🔒 Why HearAI?
 Feature	Benefit
-Runs locally	No cloud, no data leaks
-Works offline	Airplane mode compatible
-Supports multiple AI models	Speech, LLM, NLP
-One backend for all apps	Mobile, Web, Desktop
-Developer-friendly	FastAPI, REST, Python
+Local execution	No cloud, no data leaks
+Offline capable	Works without internet
+Multi-model support	Speech + LLM + NLP
+One backend	Multiple client apps
+FastAPI	Easy integration
 🧠 Vision
 
-HearAI is designed to be the core AI brain for:
+HearAI is built to be the core AI engine for private, offline, and secure intelligent applications.
+
+Your voice.
+Your data.
+Your AI.
+
+
+---
+
+If you want, next I can help you add:
+
+• API endpoint docs  
+• Screenshots section  
+• Logo & branding  
+• Deployment guide  
+
+Just say 😎
