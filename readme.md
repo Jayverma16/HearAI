@@ -50,9 +50,11 @@ HearAI acts as the **AI brain** for all your local applications.
 ```bash
 conda create --name HearAI python=3.12 -y
 conda activate HearAI
-
+```
 2️⃣ Install Dependencies
+```bash
 pip install -r requirement.txt
+```
 
 3️⃣ Setup Database
 
