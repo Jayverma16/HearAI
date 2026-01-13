@@ -17,3 +17,12 @@ class Meeting(Base):
     transcript = Column(Text)
     summary = Column(Text)
     created_at = Column(DateTime, default=datetime.utcnow)
+    
+class TranscriptChunk(Base):
+    __tablename__ = "transcript_chunks"
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    session_id = Column(String(64), index=True)
+    text = Column(Text)
+    created_at = Column(DateTime, default=datetime.utcnow)
